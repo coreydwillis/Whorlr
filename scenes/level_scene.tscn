@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://dmj6guwgmcxj6"]
+[gd_scene load_steps=10 format=3 uid="uid://dmj6guwgmcxj6"]
 
 [ext_resource type="Texture2D" uid="uid://cww1t2llwlplk" path="res://assets/backgrounds/Background-forest_01.png" id="1_386oa"]
 [ext_resource type="Texture2D" uid="uid://c7k7yhta48i8o" path="res://assets/sprites/Environment.png" id="2_eohcs"]
 [ext_resource type="Texture2D" uid="uid://b0k4mn54hr0b8" path="res://assets/backgrounds/Background-forest_03.png" id="3_1lj4f"]
 [ext_resource type="PackedScene" uid="uid://cme633yqmj6ve" path="res://scenes/player.tscn" id="5_eohcs"]
+[ext_resource type="PackedScene" uid="uid://hciwkpkauxy6" path="res://scenes/wolf.tscn" id="5_ojpky"]
 [ext_resource type="AudioStream" uid="uid://l6f5nto1v2lo" path="res://assets/music/16 The Brilliant and the Dark Karen Gwyer.mp3" id="7_2m3ut"]
 [ext_resource type="Texture2D" uid="uid://bdkjx84bykrxr" path="res://assets/backgrounds/Background-forest_08.png" id="7_lkilr"]
 [ext_resource type="Texture2D" uid="uid://do7k6j7nlvv8m" path="res://assets/backgrounds/Background-forest_09.png" id="8_cupps"]
@@ -50,8 +51,8 @@ region_enabled = true
 region_rect = Rect2(928.18, 137.653, 79.0533, 416.24)
 
 [node name="tree7" type="Sprite2D" parent="Env"]
-position = Vector2(1494.87, 258)
-scale = Vector2(0.712124, 1.29245)
+position = Vector2(1494.87, 91.5607)
+scale = Vector2(0.712124, 2.08881)
 texture = ExtResource("2_eohcs")
 region_enabled = true
 region_rect = Rect2(1132.1, 133.6, 55.7334, 418)
@@ -134,12 +135,58 @@ region_enabled = true
 region_rect = Rect2(1719.79, 144.6, 132, 120.267)
 
 [node name="bushes2" type="Sprite2D" parent="Env"]
-position = Vector2(1110, 333)
-scale = Vector2(1.47593, 1.47593)
+position = Vector2(1088, 308)
+scale = Vector2(1.60833, 1.60833)
 texture = ExtResource("7_lkilr")
 
-[node name="Player" parent="." instance=ExtResource("5_eohcs")]
-position = Vector2(854, 557)
+[node name="Playfield" type="Node2D" parent="."]
+
+[node name="Player" parent="Playfield" instance=ExtResource("5_eohcs")]
+position = Vector2(792, 563)
+
+[node name="Wolf" parent="Playfield" node_paths=PackedStringArray("player") instance=ExtResource("5_ojpky")]
+position = Vector2(1203, 974)
+player = NodePath("../Player")
+
+[node name="Wolf11" parent="Playfield" node_paths=PackedStringArray("player") instance=ExtResource("5_ojpky")]
+position = Vector2(1607, 1058)
+player = NodePath("../Player")
+
+[node name="Wolf2" parent="Playfield" node_paths=PackedStringArray("player") instance=ExtResource("5_ojpky")]
+position = Vector2(883, 1024)
+player = NodePath("../Player")
+
+[node name="Wolf3" parent="Playfield" node_paths=PackedStringArray("player") instance=ExtResource("5_ojpky")]
+position = Vector2(1935, 859)
+player = NodePath("../Player")
+
+[node name="Wolf4" parent="Playfield" node_paths=PackedStringArray("player") instance=ExtResource("5_ojpky")]
+position = Vector2(-89, 760)
+player = NodePath("../Player")
+
+[node name="Wolf5" parent="Playfield" node_paths=PackedStringArray("player") instance=ExtResource("5_ojpky")]
+position = Vector2(-63, 861)
+player = NodePath("../Player")
+
+[node name="Wolf6" parent="Playfield" node_paths=PackedStringArray("player") instance=ExtResource("5_ojpky")]
+position = Vector2(-157, 647)
+player = NodePath("../Player")
+
+[node name="Wolf7" parent="Playfield" node_paths=PackedStringArray("player") instance=ExtResource("5_ojpky")]
+position = Vector2(-135, 978)
+player = NodePath("../Player")
+
+[node name="Wolf8" parent="Playfield" node_paths=PackedStringArray("player") instance=ExtResource("5_ojpky")]
+position = Vector2(-78, 1081)
+player = NodePath("../Player")
+
+[node name="Wolf9" parent="Playfield" node_paths=PackedStringArray("player") instance=ExtResource("5_ojpky")]
+position = Vector2(162, 1004)
+player = NodePath("../Player")
+
+[node name="Wolf10" parent="Playfield" node_paths=PackedStringArray("player") instance=ExtResource("5_ojpky")]
+position = Vector2(437, 1021)
+player = NodePath("../Player")
 
 [node name="Foreground" type="Node2D" parent="."]
 
@@ -156,6 +203,7 @@ region_enabled = true
 region_rect = Rect2(1439.67, 636.667, 52, 38)
 
 [node name="Left wall" type="StaticBody2D" parent="."]
+collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Left wall"]
 position = Vector2(-12, 573.25)
