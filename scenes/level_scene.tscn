@@ -1,0 +1,172 @@
+[gd_scene load_steps=9 format=3 uid="uid://dmj6guwgmcxj6"]
+
+[ext_resource type="Texture2D" uid="uid://cww1t2llwlplk" path="res://assets/backgrounds/Background-forest_01.png" id="1_386oa"]
+[ext_resource type="Texture2D" uid="uid://c7k7yhta48i8o" path="res://assets/sprites/Environment.png" id="2_eohcs"]
+[ext_resource type="Texture2D" uid="uid://b0k4mn54hr0b8" path="res://assets/backgrounds/Background-forest_03.png" id="3_1lj4f"]
+[ext_resource type="PackedScene" uid="uid://cme633yqmj6ve" path="res://scenes/player.tscn" id="5_eohcs"]
+[ext_resource type="AudioStream" uid="uid://l6f5nto1v2lo" path="res://assets/music/16 The Brilliant and the Dark Karen Gwyer.mp3" id="7_2m3ut"]
+[ext_resource type="Texture2D" uid="uid://bdkjx84bykrxr" path="res://assets/backgrounds/Background-forest_08.png" id="7_lkilr"]
+[ext_resource type="Texture2D" uid="uid://do7k6j7nlvv8m" path="res://assets/backgrounds/Background-forest_09.png" id="8_cupps"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eohcs"]
+size = Vector2(72, 1259.5)
+
+[node name="LevelScene" type="Node2D"]
+
+[node name="Env" type="Node2D" parent="."]
+
+[node name="green back" type="Sprite2D" parent="Env"]
+position = Vector2(960.044, 576.125)
+scale = Vector2(5.49978, 4.58426)
+texture = ExtResource("1_386oa")
+hframes = 4
+vframes = 4
+frame = 4
+
+[node name="brush" type="Sprite2D" parent="Env"]
+position = Vector2(912, 423)
+scale = Vector2(1.07222, 1.07222)
+texture = ExtResource("3_1lj4f")
+
+[node name="tree1" type="Sprite2D" parent="Env"]
+position = Vector2(1770, 254)
+scale = Vector2(1.45776, 1.32102)
+texture = ExtResource("2_eohcs")
+region_enabled = true
+region_rect = Rect2(928.18, 137.653, 79.0533, 416.24)
+
+[node name="tree2" type="Sprite2D" parent="Env"]
+position = Vector2(325, 167)
+scale = Vector2(1.75989, 1.74355)
+texture = ExtResource("2_eohcs")
+region_enabled = true
+region_rect = Rect2(928.18, 137.653, 79.0533, 416.24)
+
+[node name="tree3" type="Sprite2D" parent="Env"]
+position = Vector2(962, 255)
+scale = Vector2(0.968552, 1.29245)
+texture = ExtResource("2_eohcs")
+region_enabled = true
+region_rect = Rect2(928.18, 137.653, 79.0533, 416.24)
+
+[node name="tree7" type="Sprite2D" parent="Env"]
+position = Vector2(1494.87, 258)
+scale = Vector2(0.712124, 1.29245)
+texture = ExtResource("2_eohcs")
+region_enabled = true
+region_rect = Rect2(1132.1, 133.6, 55.7334, 418)
+
+[node name="tree8" type="Sprite2D" parent="Env"]
+position = Vector2(1315.64, 81.821)
+scale = Vector2(1.17659, 2.13541)
+texture = ExtResource("2_eohcs")
+region_enabled = true
+region_rect = Rect2(1132.1, 133.6, 55.7334, 418)
+
+[node name="tree9" type="Sprite2D" parent="Env"]
+position = Vector2(753, 95)
+scale = Vector2(1.17659, 2.13541)
+texture = ExtResource("2_eohcs")
+region_enabled = true
+region_rect = Rect2(1365.3, 132.867, 57.9333, 422.4)
+
+[node name="tree4" type="Sprite2D" parent="Env"]
+position = Vector2(955, 45)
+scale = Vector2(0.968552, 1.29245)
+texture = ExtResource("2_eohcs")
+region_enabled = true
+region_rect = Rect2(1496.73, 135.6, 173.8, 166.467)
+
+[node name="tree11" type="Sprite2D" parent="Env"]
+position = Vector2(955, 45)
+scale = Vector2(0.968552, 1.29245)
+texture = ExtResource("2_eohcs")
+region_enabled = true
+region_rect = Rect2(1496.73, 135.6, 173.8, 166.467)
+
+[node name="tree12" type="Sprite2D" parent="Env"]
+position = Vector2(1004, 87)
+scale = Vector2(0.968552, 1.29245)
+texture = ExtResource("2_eohcs")
+region_enabled = true
+region_rect = Rect2(1496.73, 135.6, 173.8, 166.467)
+
+[node name="tree13" type="Sprite2D" parent="Env"]
+position = Vector2(303, 30)
+scale = Vector2(0.968552, 1.29245)
+texture = ExtResource("2_eohcs")
+region_enabled = true
+region_rect = Rect2(1496.73, 135.6, 173.8, 166.467)
+
+[node name="tree14" type="Sprite2D" parent="Env"]
+position = Vector2(396, 52)
+scale = Vector2(0.968552, 1.29245)
+texture = ExtResource("2_eohcs")
+region_enabled = true
+region_rect = Rect2(1496.73, 135.6, 173.8, 166.467)
+
+[node name="tree5" type="Sprite2D" parent="Env"]
+position = Vector2(1734, 22)
+scale = Vector2(0.968552, 1.29245)
+texture = ExtResource("2_eohcs")
+region_enabled = true
+region_rect = Rect2(1719.79, 144.6, 132, 120.267)
+
+[node name="tree10" type="Sprite2D" parent="Env"]
+position = Vector2(1788, 83)
+scale = Vector2(0.968552, 1.29245)
+texture = ExtResource("2_eohcs")
+region_enabled = true
+region_rect = Rect2(1719.79, 144.6, 132, 120.267)
+
+[node name="tree6" type="Sprite2D" parent="Env"]
+position = Vector2(1808, 43)
+scale = Vector2(0.968552, 1.29245)
+texture = ExtResource("2_eohcs")
+region_enabled = true
+region_rect = Rect2(1719.79, 144.6, 132, 120.267)
+
+[node name="tree15" type="Sprite2D" parent="Env"]
+position = Vector2(379, 33)
+scale = Vector2(0.968552, 1.29245)
+texture = ExtResource("2_eohcs")
+region_enabled = true
+region_rect = Rect2(1719.79, 144.6, 132, 120.267)
+
+[node name="bushes2" type="Sprite2D" parent="Env"]
+position = Vector2(1110, 333)
+scale = Vector2(1.47593, 1.47593)
+texture = ExtResource("7_lkilr")
+
+[node name="Player" parent="." instance=ExtResource("5_eohcs")]
+position = Vector2(854, 557)
+
+[node name="Foreground" type="Node2D" parent="."]
+
+[node name="foreground bushes" type="Sprite2D" parent="Foreground"]
+position = Vector2(991, 707)
+scale = Vector2(1.26389, 1.26389)
+texture = ExtResource("8_cupps")
+
+[node name="tree10" type="Sprite2D" parent="Foreground"]
+position = Vector2(860, 584)
+scale = Vector2(1.75989, 1.74355)
+texture = ExtResource("2_eohcs")
+region_enabled = true
+region_rect = Rect2(1439.67, 636.667, 52, 38)
+
+[node name="Left wall" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Left wall"]
+position = Vector2(-12, 573.25)
+shape = SubResource("RectangleShape2D_eohcs")
+
+[node name="right wall" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="right wall"]
+position = Vector2(1928, 587)
+shape = SubResource("RectangleShape2D_eohcs")
+
+[node name="MusicPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_2m3ut")
+autoplay = true
